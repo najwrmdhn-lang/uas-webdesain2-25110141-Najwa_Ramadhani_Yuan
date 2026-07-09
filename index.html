@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nagih Kuliner Pekanbaru</title>
+
+    <!-- Bootstrap 4.5.3 -->
+    <link rel="stylesheet" href="bootstrap-4.5.3-dist/css/bootstrap.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger sticky-top">
+
+    <div class="container">
+
+        <a class="navbar-brand font-weight-bold" href="#">
+            Nagih Kuliner
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#menu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#home">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">Tentang</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#produk">Produk</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#kontak">Kontak</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- ================= CAROUSEL ================= -->
+
+<div id="slider" class="carousel slide" data-ride="carousel">
+
+    <ol class="carousel-indicators">
+
+        <li data-target="#slider"
+            data-slide-to="0"
+            class="active"></li>
+
+        <li data-target="#slider"
+            data-slide-to="1"></li>
+
+        <li data-target="#slider"
+            data-slide-to="2"></li>
+
+    </ol>
+
+    <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+
+        <div class="carousel-item active">
+
+            <img src="img/banner1.jpg"
+                 class="d-block w-100"
+                 height="500"
+                 alt="Banner 1">
+
+            <div class="carousel-caption">
+
+                <h1>Nagih Kuliner Pekanbaru</h1>
+
+                <p>Rasa Enak, Harga Bersahabat</p>
+
+                <a href="#produk" class="btn btn-warning">
+                    Lihat Menu
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Slide 2 -->
+
+        <div class="carousel-item">
+
+            <img src="img/banner2.jpg"
+                 class="d-block w-100"
+                 height="500"
+                 alt="Banner 2">
+
+            <div class="carousel-caption">
+
+                <h1>Makanan Favorit Keluarga</h1>
+
+                <p>Ayam Geprek • Nasi Goreng • Mie Goreng</p>
+
+            </div>
+
+        </div>
+
+        <!-- Slide 3 -->
+
+        <div class="carousel-item">
+
+            <img src="img/banner3.jpg"
+                 class="d-block w-100"
+                 height="500"
+                 alt="Banner 3">
+
+            <div class="carousel-caption">
+
+                <h1>Kualitas Terbaik</h1>
+
+                <p>Dimasak setiap hari dengan bahan segar.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <a class="carousel-control-prev"
+       href="#slider"
+       role="button"
+       data-slide="prev">
+
+        <span class="carousel-control-prev-icon"></span>
+
+    </a>
+
+    <a class="carousel-control-next"
+       href="#slider"
+       role="button"
+       data-slide="next">
+
+        <span class="carousel-control-next-icon"></span>
+
+    </a>
+
+</div>
+
+<!-- ================= HERO ================= -->
+
+<section id="home" class="py-5">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+                <h2 class="font-weight-bold text-danger">
+                    Selamat Datang di Nagih Kuliner
+                </h2>
+
+                <p>
+                    Nagih Kuliner merupakan UMKM kuliner di Pekanbaru yang
+                    menyediakan berbagai makanan dan minuman dengan cita rasa
+                    khas Indonesia menggunakan bahan berkualitas.
+                </p>
+
+                <a href="#produk"
+                   class="btn btn-danger">
+
+                    Pesan Sekarang
+
+                </a>
+
+            </div>
+
+            <div class="col-lg-6 text-center">
+
+                <img src="img/menu1.jpg"
+                     class="img-fluid rounded shadow"
+                     alt="Menu">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="py-5 bg-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="font-weight-bold">
+                Tentang Nagih Kuliner
+            </h2>
+
+            <p class="text-muted">
+                Mengenal lebih dekat UMKM kuliner favorit di Pekanbaru.
+            </p>
+
+        </div>
+
+        <div class="row align-items-center">
+
+            <div class="col-md-6 text-center">
+
+                <img src="img/about.jpg"
+                     class="img-fluid rounded shadow"
+                     alt="Tentang Kami">
+
+            </div>
+
+            <div class="col-md-6">
+
+                <h3 class="font-weight-bold">
+                    Siapa Kami?
+                </h3>
+
+                <p style="text-align:justify;">
+                    Nagih Kuliner Pekanbaru merupakan UMKM yang bergerak di bidang
+                    kuliner dengan menyediakan berbagai menu makanan dan minuman
+                    khas Indonesia. Kami mengutamakan cita rasa, kualitas bahan,
+                    serta pelayanan yang ramah sehingga setiap pelanggan merasa
+                    puas ketika berkunjung.
+                </p>
+
+                <div class="row mt-4">
+
+                    <div class="col-6">
+
+                        <h5 class="font-weight-bold">
+                            Visi
+                        </h5>
+
+                        <p>
+                            Menjadi pilihan utama masyarakat Pekanbaru dalam
+                            menikmati kuliner berkualitas.
+                        </p>
+
+                    </div>
+
+                    <div class="col-6">
+
+                        <h5 class="font-weight-bold">
+                            Misi
+                        </h5>
+
+                        <ul>
+
+                            <li>Menjaga kualitas makanan.</li>
+
+                            <li>Pelayanan cepat dan ramah.</li>
+
+                            <li>Harga terjangkau.</li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= KEUNGGULAN ================= -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <h2 class="text-center font-weight-bold mb-5">
+            Kenapa Memilih Kami?
+        </h2>
+
+        <div class="row">
+
+            <div class="col-md-4 mb-4">
+
+                <div class="card shadow h-100">
+
+                    <div class="card-body text-center">
+
+                        <h4>Harga Terjangkau</h4>
+
+                        <p>
+                            Menu mulai dari Rp15.000 dengan kualitas terbaik.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4 mb-4">
+
+                <div class="card shadow h-100">
+
+                    <div class="card-body text-center">
+
+                        <h4>Pelayanan Cepat</h4>
+
+                        <p>
+                            Semua pesanan diproses dengan cepat dan higienis.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4 mb-4">
+
+                <div class="card shadow h-100">
+
+                    <div class="card-body text-center">
+
+                        <h4>Bahan Berkualitas</h4>
+
+                        <p>
+                            Menggunakan bahan segar setiap hari agar rasa tetap
+                            terjaga.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer id="kontak" class="bg-danger text-white text-center py-4">
+
+    <div class="container">
+
+        <h4>Nagih Kuliner Pekanbaru</h4>
+
+        <p>
+            Jl. HR. Soebrantas, Pekanbaru
+        </p>
+
+        <p>
+            Telp : 0812-3456-7890
+        </p>
+
+        <hr class="bg-white">
+
+        <p class="mb-0">
+            Copyright &copy; 2026 Nagih Kuliner Pekanbaru
+        </p>
+
+    </div>
+
+</footer>
+
+<!-- JQuery -->
+
+<script src="bootstrap-4.5.3-dist/js/jquery-3.5.1.min.js"></script>
+
+<!-- Bootstrap -->
+
+
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
