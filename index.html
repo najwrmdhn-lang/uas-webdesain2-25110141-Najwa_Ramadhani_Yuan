@@ -6,400 +6,340 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nagih Kuliner Pekanbaru</title>
 
-    <!-- Bootstrap 4.5.3 -->
     <link rel="stylesheet" href="bootstrap-4.5.3-dist/css/bootstrap.min.css">
-
-    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-danger sticky-top">
-
     <div class="container">
-
-        <a class="navbar-brand font-weight-bold" href="#">
+        <a class="navbar-brand font-weight-bold" href="#home">
             Nagih Kuliner
         </a>
-
-        <button class="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#menu">
-
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
             <span class="navbar-toggler-icon"></span>
-
         </button>
 
         <div class="collapse navbar-collapse" id="menu">
-
             <ul class="navbar-nav ml-auto">
-
                 <li class="nav-item">
-                    <a class="nav-link active" href="#home">Home</a>
+                    <a class="nav-link" href="#home">Home</a>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link" href="#about">Tentang</a>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link" href="#produk">Produk</a>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link" href="#kontak">Kontak</a>
                 </li>
-
             </ul>
-
         </div>
-
     </div>
-
 </nav>
 
-<!-- ================= CAROUSEL ================= -->
+<main id="content-wrapper">
 
-<div id="slider" class="carousel slide" data-ride="carousel">
-
-    <ol class="carousel-indicators">
-
-        <li data-target="#slider"
-            data-slide-to="0"
-            class="active"></li>
-
-        <li data-target="#slider"
-            data-slide-to="1"></li>
-
-        <li data-target="#slider"
-            data-slide-to="2"></li>
-
-    </ol>
-
-    <div class="carousel-inner">
-
-        <!-- Slide 1 -->
-
-        <div class="carousel-item active">
-
-            <img src="img/banner1.jpg"
-                 class="d-block w-100"
-                 height="500"
-                 alt="Banner 1">
-
-            <div class="carousel-caption">
-
-                <h1>Nagih Kuliner Pekanbaru</h1>
-
-                <p>Rasa Enak, Harga Bersahabat</p>
-
-                <a href="#produk" class="btn btn-warning">
-                    Lihat Menu
-                </a>
-
+    <!-- SLIDER + HOME -->
+    <section id="home" class="page-section">
+        <div id="slider" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#slider" data-slide-to="0" class="active"></li>
+                <li data-target="#slider" data-slide-to="1"></li>
+                <li data-target="#slider" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/banner1.jpg" class="d-block w-100" alt="Banner 1">
+                    <div class="carousel-caption">
+                        <h1>Nagih Kuliner Pekanbaru</h1>
+                        <p>Rasa Enak, Harga Bersahabat</p>
+                        <a href="#produk" class="btn btn-warning btn-lg font-weight-bold">Lihat Menu</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/banner2.jpg" class="d-block w-100" alt="Banner 2">
+                    <div class="carousel-caption">
+                        <h1>Makanan Favorit Keluarga</h1>
+                        <p>Ayam Geprek • Nasi Goreng • Mie Goreng</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/banner3.jpg" class="d-block w-100" alt="Banner 3">
+                    <div class="carousel-caption">
+                        <h1>Kualitas Terbaik</h1>
+                        <p>Dimasak setiap hari dengan bahan segar.</p>
+                    </div>
+                </div>
             </div>
-
+            <a class="carousel-control-prev" href="#slider" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#slider" role="button" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
         </div>
 
-        <!-- Slide 2 -->
-
-        <div class="carousel-item">
-
-            <img src="img/banner2.jpg"
-                 class="d-block w-100"
-                 height="500"
-                 alt="Banner 2">
-
-            <div class="carousel-caption">
-
-                <h1>Makanan Favorit Keluarga</h1>
-
-                <p>Ayam Geprek • Nasi Goreng • Mie Goreng</p>
-
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="font-weight-bold text-danger">Selamat Datang di Nagih Kuliner</h2>
+                    <p>Nagih Kuliner merupakan UMKM kuliner di Pekanbaru yang menyediakan berbagai makanan dan minuman dengan cita rasa khas Indonesia menggunakan bahan berkualitas.</p>
+                    <a href="#produk" class="btn btn-danger">Pesan Sekarang</a>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="img/menu1.jpg" class="img-fluid rounded shadow" alt="Menu">
+                </div>
             </div>
-
         </div>
+    </section>
 
-        <!-- Slide 3 -->
-
-        <div class="carousel-item">
-
-            <img src="img/banner3.jpg"
-                 class="d-block w-100"
-                 height="500"
-                 alt="Banner 3">
-
-            <div class="carousel-caption">
-
-                <h1>Kualitas Terbaik</h1>
-
-                <p>Dimasak setiap hari dengan bahan segar.</p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <a class="carousel-control-prev"
-       href="#slider"
-       role="button"
-       data-slide="prev">
-
-        <span class="carousel-control-prev-icon"></span>
-
-    </a>
-
-    <a class="carousel-control-next"
-       href="#slider"
-       role="button"
-       data-slide="next">
-
-        <span class="carousel-control-next-icon"></span>
-
-    </a>
-
-</div>
-
-<!-- ================= HERO ================= -->
-
-<section id="home" class="py-5">
-
+    <section id="about" class="page-section py-5 bg-light">
     <div class="container">
-
-        <div class="row align-items-center">
-
-            <div class="col-lg-6">
-
-                <h2 class="font-weight-bold text-danger">
-                    Selamat Datang di Nagih Kuliner
-                </h2>
-
-                <p>
-                    Nagih Kuliner merupakan UMKM kuliner di Pekanbaru yang
-                    menyediakan berbagai makanan dan minuman dengan cita rasa
-                    khas Indonesia menggunakan bahan berkualitas.
-                </p>
-
-                <a href="#produk"
-                   class="btn btn-danger">
-
-                    Pesan Sekarang
-
-                </a>
-
-            </div>
-
-            <div class="col-lg-6 text-center">
-
-                <img src="img/menu1.jpg"
-                     class="img-fluid rounded shadow"
-                     alt="Menu">
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!-- ================= ABOUT ================= -->
-
-<section id="about" class="py-5 bg-light">
-
-    <div class="container">
-
         <div class="text-center mb-5">
-
-            <h2 class="font-weight-bold">
-                Tentang Nagih Kuliner
-            </h2>
-
-            <p class="text-muted">
-                Mengenal lebih dekat UMKM kuliner favorit di Pekanbaru.
-            </p>
-
+            <h2 class="font-weight-bold">Tentang Nagih Kuliner</h2>
+            <p class="text-muted">Mengenal lebih dekat UMKM kuliner favorit di Pekanbaru.</p>
         </div>
 
-        <div class="row align-items-center">
-
-            <div class="col-md-6 text-center">
-
-                <img src="img/about.jpg"
-                     class="img-fluid rounded shadow"
-                     alt="Tentang Kami">
-
+        <!-- ROW 1: CERITA + GAMBAR -->
+        <div class="row align-items-center mb-5">
+            <div class="col-md-6 text-center mb-4 mb-md-0">
+                <img src="img/about.jpg" class="img-fluid rounded shadow-lg about-img" alt="Tentang Kami">
             </div>
-
             <div class="col-md-6">
-
-                <h3 class="font-weight-bold">
-                    Siapa Kami?
-                </h3>
-
+                <h3 class="font-weight-bold text-danger">Siapa Kami?</h3>
                 <p style="text-align:justify;">
-                    Nagih Kuliner Pekanbaru merupakan UMKM yang bergerak di bidang
-                    kuliner dengan menyediakan berbagai menu makanan dan minuman
-                    khas Indonesia. Kami mengutamakan cita rasa, kualitas bahan,
-                    serta pelayanan yang ramah sehingga setiap pelanggan merasa
-                    puas ketika berkunjung.
+                    Nagih Kuliner Pekanbaru berawal dari kecintaan kami terhadap kuliner Nusantara yang kaya akan rempah. 
+                    Didirikan sejak tahun 2019, kami berkomitmen menyajikan hidangan higienis, lezat, dan ramah di kantong.
+                </p>
+                <p style="text-align:justify;">
+                    Kami percaya makanan yang baik dibuat dengan hati. Seluruh proses dari pemilihan bahan baku hingga penyajian 
+                    diawasi dengan standar kebersihan yang ketat.
                 </p>
 
                 <div class="row mt-4">
-
                     <div class="col-6">
-
-                        <h5 class="font-weight-bold">
-                            Visi
-                        </h5>
-
-                        <p>
-                            Menjadi pilihan utama masyarakat Pekanbaru dalam
-                            menikmati kuliner berkualitas.
-                        </p>
-
+                        <h5 class="font-weight-bold text-danger"><i class="fas fa-eye mr-2"></i>Visi</h5>
+                        <p class="small">Menjadi pilihan utama masyarakat Pekanbaru dalam menikmati kuliner berkualitas.</p>
                     </div>
-
                     <div class="col-6">
-
-                        <h5 class="font-weight-bold">
-                            Misi
-                        </h5>
-
-                        <ul>
-
-                            <li>Menjaga kualitas makanan.</li>
-
-                            <li>Pelayanan cepat dan ramah.</li>
-
-                            <li>Harga terjangkau.</li>
-
+                        <h5 class="font-weight-bold text-danger"><i class="fas fa-bullseye mr-2"></i>Misi</h5>
+                        <ul class="small pl-3">
+                            <li>Rasa konsisten & nagih</li>
+                            <li>Pelayanan cepat & higienis</li>
+                            <li>Harga ramah pelanggan</li>
                         </ul>
-
                     </div>
-
                 </div>
-
             </div>
+        </div>
 
+        <!-- ROW 2: STATISTIK / KEUNGGULAN -->
+        <div class="row text-center mb-5">
+            <div class="col-md-3 col-6 mb-4">
+                <div class="about-stat">
+                    <i class="fas fa-users fa-2x text-danger mb-2"></i>
+                    <h4 class="font-weight-bold">5000+</h4>
+                    <p class="text-muted">Pelanggan Puas</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-4">
+                <div class="about-stat">
+                    <i class="fas fa-utensils fa-2x text-danger mb-2"></i>
+                    <h4 class="font-weight-bold">30+</h4>
+                    <p class="text-muted">Menu Andalan</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-4">
+                <div class="about-stat">
+                    <i class="fas fa-award fa-2x text-danger mb-2"></i>
+                    <h4 class="font-weight-bold">7 Tahun</h4>
+                    <p class="text-muted">Berpengalaman</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-4">
+                <div class="about-stat">
+                    <i class="fas fa-shipping-fast fa-2x text-danger mb-2"></i>
+                    <h4 class="font-weight-bold">30 Menit</h4>
+                    <p class="text-muted">Pesan Sampai</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ROW 3: GALERI DAPUR -->
+        <div class="text-center mb-4">
+            <h4 class="font-weight-bold">Dapur Kami <span class="text-danger">100% Higienis</span></h4>
+        </div>
+        <div class="row mb-5">
+            <div class="col-md-4 mb-3">
+                <img src="img/dapur1.jpg" class="img-fluid rounded shadow-sm gallery-img" alt="Proses Masak">
+            </div>
+            <div class="col-md-4 mb-3">
+                <img src="img/dapur2.jpg" class="img-fluid rounded shadow-sm gallery-img" alt="Bahan Segar">
+            </div>
+            <div class="col-md-4 mb-3">
+                <img src="img/dapur3.jpg" class="img-fluid rounded shadow-sm gallery-img" alt="Packing">
+            </div>
+        </div>
+
+        <!-- ROW 4: TESTIMONI SINGKAT -->
+        <div class="card border-0 shadow-lg p-4 bg-white">
+            <div class="text-center mb-3">
+                <i class="fas fa-quote-left fa-2x text-danger"></i>
+            </div>
+            <p class="text-center font-italic">"Gila sih ayam gepreknya nagih banget! Sambalnya pedes nampol tapi nagih. Pelayanan juga cepet. Wajib coba!"</p>
+            <h6 class="text-center font-weight-bold mt-3">- Rina, Mahasiswa UIN Pekanbaru</h6>
+            <div class="text-center mt-2 text-warning">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+        </div>
+
+        <!-- CTA BUTTON -->
+        <div class="text-center mt-5">
+            <a href="#produk" class="btn btn-danger btn-lg font-weight-bold">Lihat Menu Andalan Kami</a>
         </div>
 
     </div>
-
 </section>
 
-<!-- ================= KEUNGGULAN ================= -->
-
-<section class="py-5">
-
-    <div class="container">
-
-        <h2 class="text-center font-weight-bold mb-5">
-            Kenapa Memilih Kami?
-        </h2>
-
-        <div class="row">
-
-            <div class="col-md-4 mb-4">
-
-                <div class="card shadow h-100">
-
-                    <div class="card-body text-center">
-
-                        <h4>Harga Terjangkau</h4>
-
-                        <p>
-                            Menu mulai dari Rp15.000 dengan kualitas terbaik.
-                        </p>
-
-                    </div>
-
-                </div>
-
+    <!-- PRODUK -->
+    <section id="produk" class="page-section py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="font-weight-bold">Menu Andalan Kami</h2>
+                <p class="text-muted">Hidangan spesial siap memanjakan lidah Anda.</p>
             </div>
-
-            <div class="col-md-4 mb-4">
-
-                <div class="card shadow h-100">
-
-                    <div class="card-body text-center">
-
-                        <h4>Pelayanan Cepat</h4>
-
-                        <p>
-                            Semua pesanan diproses dengan cepat dan higienis.
-                        </p>
-
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow border-0 h-100">
+                        <img src="img/ayam-geprek.jpg" class="card-img-top" alt="Ayam Geprek">
+                        <div class="card-body">
+                            <h5 class="card-title font-weight-bold">Ayam Geprek Sambal Korek</h5>
+                            <h5 class="text-danger font-weight-bold">Rp 18.000</h5>
+                            <a href="https://wa.me/6281234567890" class="btn btn-outline-danger btn-block mt-3" target="_blank">Pesan Via WA</a>
+                        </div>
                     </div>
-
                 </div>
-
-            </div>
-
-            <div class="col-md-4 mb-4">
-
-                <div class="card shadow h-100">
-
-                    <div class="card-body text-center">
-
-                        <h4>Bahan Berkualitas</h4>
-
-                        <p>
-                            Menggunakan bahan segar setiap hari agar rasa tetap
-                            terjaga.
-                        </p>
-
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow border-0 h-100">
+                        <img src="img/ayam-geprek.jpg" class="card-img-top" alt="Ayam Geprek">
+                        <div class="card-body">
+                            <h5 class="card-title font-weight-bold">Ayam Geprek Sambal Korek</h5>
+                            <h5 class="text-danger font-weight-bold">Rp 18.000</h5>
+                            <a href="https://wa.me/6281234567890" class="btn btn-outline-danger btn-block mt-3" target="_blank">Pesan Via WA</a>
+                        </div>
                     </div>
-
                 </div>
-
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow border-0 h-100">
+                        <img src="img/ayam-geprek.jpg" class="card-img-top" alt="Ayam Geprek">
+                        <div class="card-body">
+                            <h5 class="card-title font-weight-bold">Ayam Geprek Sambal Korek</h5>
+                            <h5 class="text-danger font-weight-bold">Rp 18.000</h5>
+                            <a href="https://wa.me/6281234567890" class="btn btn-outline-danger btn-block mt-3" target="_blank">Pesan Via WA</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow border-0 h-100">
+                        <img src="img/ayam-geprek.jpg" class="card-img-top" alt="Ayam Geprek">
+                        <div class="card-body">
+                            <h5 class="card-title font-weight-bold">Ayam Geprek Sambal Korek</h5>
+                            <h5 class="text-danger font-weight-bold">Rp 18.000</h5>
+                            <a href="https://wa.me/6281234567890" class="btn btn-outline-danger btn-block mt-3" target="_blank">Pesan Via WA</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow border-0 h-100">
+                        <img src="img/ayam-geprek.jpg" class="card-img-top" alt="Ayam Geprek">
+                        <div class="card-body">
+                            <h5 class="card-title font-weight-bold">Ayam Geprek Sambal Korek</h5>
+                            <h5 class="text-danger font-weight-bold">Rp 18.000</h5>
+                            <a href="https://wa.me/6281234567890" class="btn btn-outline-danger btn-block mt-3" target="_blank">Pesan Via WA</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow border-0 h-100">
+                        <img src="img/ayam-geprek.jpg" class="card-img-top" alt="Ayam Geprek">
+                        <div class="card-body">
+                            <h5 class="card-title font-weight-bold">Ayam Geprek Sambal Korek</h5>
+                            <h5 class="text-danger font-weight-bold">Rp 18.000</h5>
+                            <a href="https://wa.me/6281234567890" class="btn btn-outline-danger btn-block mt-3" target="_blank">Pesan Via WA</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card lainnya -->
             </div>
-
         </div>
+    </section>
 
-    </div>
+    <!-- KONTAK -->
+    <section id="kontak" class="page-section py-5 text-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="font-weight-bold">Hubungi Kami</h2>
+                <p class="text-muted">Punya pertanyaan atau ingin melakukan pemesanan catering? Hubungi kami langsung.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-4 info-box">
+                    <h4 class="text-danger font-weight-bold mb-4">Nagih Kuliner Pekanbaru</h4>
+                    <p><i class="fas fa-map-marker-alt text-danger mr-3"></i> Jl. Krakatau No.38, Pekanbaru, Riau</p>
+                    <p><i class="fas fa-phone-alt text-danger mr-3"></i> 0822-5028-2898</p>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card card-form border-0 shadow-lg p-4">
+                        <h5 class="font-weight-bold mb-4 text-center">Kirim Pesan</h5>
+                        <form action="kirim_pesan.php" method="POST">
+                            <div class="form-group">
+                                <label>Nama Lengkap</label>
+                                <input type="text" name="nama" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-danger btn-block font-weight-bold">Kirim Pesan</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</section>
+</main>
 
-<!-- ================= FOOTER ================= -->
-
-<footer id="kontak" class="bg-danger text-white text-center py-4">
-
+<footer class="bg-danger text-white text-center py-3">
     <div class="container">
-
-        <h4>Nagih Kuliner Pekanbaru</h4>
-
-        <p>
-            Jl. HR. Soebrantas, Pekanbaru
-        </p>
-
-        <p>
-            Telp : 0812-3456-7890
-        </p>
-
-        <hr class="bg-white">
-
-        <p class="mb-0">
-            Copyright &copy; 2026 Nagih Kuliner Pekanbaru
-        </p>
-
+        <p class="mb-0">Copyright &copy; 2026 Nagih Kuliner Pekanbaru.</p>
     </div>
-
 </footer>
 
-<!-- JQuery -->
-
 <script src="bootstrap-4.5.3-dist/js/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
 
-<!-- Bootstrap -->
-
-
-
-<script src="js/main.js"></script>
+<script>
+// JS BUAT NAMPILIN 1 SECTION AJA
+document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll('.page-section');
+    
+    function showSection() {
+        let hash = window.location.hash || '#home'; // default ke home
+        
+        sections.forEach(sec => {
+            if ('#' + sec.id === hash) {
+                sec.style.display = 'block';
+            } else {
+                sec.style.display = 'none';
+            }
+        });
+    }
+    
+    window.addEventListener('hashchange', showSection);
+    showSection(); // jalan pas pertama load
+});
+</script>
 
 </body>
 </html>
