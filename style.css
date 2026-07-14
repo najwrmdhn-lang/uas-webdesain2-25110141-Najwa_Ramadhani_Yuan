@@ -89,7 +89,35 @@ body{
 #about h3{
     margin-bottom:20px;
 }
+/* === CSS TAMBAHAN UNTUK ABOUT === */
+.about-img {
+    transition: 0.4s;
+    border: 5px solid #fff;
+}
+.about-img:hover {
+    transform: scale(1.03);
+}
 
+.about-stat {
+    background: #fff;
+    padding: 25px 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+.about-stat:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(220,53,69,0.2);
+}
+
+.gallery-img {
+    transition: 0.3s;
+    cursor: pointer;
+}
+.gallery-img:hover {
+    transform: scale(1.05);
+    filter: brightness(90%);
+}
 /* =========================
    CARD
 ========================= */
@@ -171,4 +199,163 @@ footer p{
     margin-top:30px;
 }
 
+}
+/* === CSS UNTUK SECTION KONTAK === */
+#kontak {
+    background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
+}
+
+#kontak h2 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+#kontak .text-muted {
+    color: #bdbdbd !important;
+}
+
+/* Info Kiri */
+#kontak .info-box i {
+    font-size: 1.2rem;
+    width: 25px;
+}
+
+#kontak .info-box p {
+    font-size: 15px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+    cursor: default;
+}
+
+#kontak .info-box p:hover {
+    color: #dc3545; /* merah bootstrap danger */
+    transform: translateX(5px);
+}
+
+/* Form Kanan */
+#kontak .card-form {
+    background: #2c2c2c;
+    border-radius: 15px;
+}
+
+#kontak .form-control {
+    background: #1f1f1f;
+    border: 1px solid #444;
+    color: #fff;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+#kontak .form-control:focus {
+    background: #1f1f1f;
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220,53,69,.25);
+    color: #fff;
+}
+
+#kontak .form-control::placeholder {
+    color: #888;
+}
+
+#kontak select.form-control option {
+    background: #1f1f1f;
+    color: #fff;
+}
+
+/* Tombol */
+#kontak .btn-danger {
+    border-radius: 10px;
+    padding: 12px;
+    transition: 0.3s;
+}
+
+#kontak .btn-danger:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(220,53,69,.4);
+}
+
+/* Maps */
+#kontak iframe {
+    border-radius: 15px;
+}
+/* === CSS UNTUK SLIDER === */
+#slider .carousel-item {
+    height: 500px; /* Tinggi slider di desktop */
+    position: relative;
+}
+
+#slider .carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Biar gambar ga gepeng */
+    filter: brightness(60%); /* Biar teks lebih kontras */
+}
+
+/* Overlay gelap biar teks kebaca */
+#slider .carousel-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+}
+
+#slider .carousel-caption {
+    bottom: 50%;
+    transform: translateY(50%); /* Teks pas di tengah */
+    z-index: 2;
+}
+
+#slider .carousel-caption h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+#slider .carousel-caption p {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+}
+
+#slider .btn-warning {
+    border-radius: 50px;
+    padding: 12px 35px;
+    transition: 0.3s;
+}
+
+#slider .btn-warning:hover {
+    transform: scale(1.05);
+}
+
+/* Indikator */
+#slider .carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+/* RESPONSIVE UNTUK HP */
+@media (max-width: 768px) {
+    #slider .carousel-item {
+        height: 350px; /* Lebih pendek di HP */
+    }
+    #slider .carousel-caption h1 {
+        font-size: 1.8rem;
+    }
+    #slider .carousel-caption p {
+        font-size: 1rem;
+    }
+}
+/* BUAT EFEK 1 HALAMAN 1 SECTION */
+.page-section {
+    display: none; /* Default semua sembunyi */
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
