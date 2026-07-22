@@ -10,6 +10,11 @@
   --transition-speed: 0.3s;
 }
 
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Mencegah layar tergeser/terpotong ke kanan pada HP */
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -41,7 +46,7 @@ body {
 }
 
 /* ==========================================
-   NAVBAR
+   NAVBAR FIX (PENGATURAN SUPAYA TIDAK KE PINGGIR)
 ========================================== */
 .navbar {
   padding: 12px 0;
@@ -49,9 +54,17 @@ body {
   backdrop-filter: blur(8px);
 }
 
+/* Memastikan padding kiri-kanan navbar pas dengan kontainer utama */
+.navbar .container {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
 .navbar-brand {
-  font-size: 26px;
+  font-size: 22px;
   letter-spacing: 0.5px;
+  margin-right: 0;
+  padding-left: 0;
   transition: transform var(--transition-speed);
 }
 
@@ -67,7 +80,6 @@ body {
   transition: color var(--transition-speed);
 }
 
-/* Underscore hover effect pada menu Navbar */
 .navbar-nav .nav-link::after {
   content: '';
   position: absolute;
@@ -105,7 +117,6 @@ body {
   transition: transform 6s ease;
 }
 
-/* Zoom effect pelan saat slide aktif */
 #slider .carousel-item.active img {
   transform: scale(1.05);
 }
@@ -114,6 +125,10 @@ body {
   bottom: 50%;
   transform: translateY(50%);
   z-index: 2;
+  width: 90%;
+  left: 5%;
+  right: 5%;
+  padding-bottom: 0;
 }
 
 #slider .carousel-caption h1 {
@@ -187,14 +202,14 @@ body {
 
 .about-stat {
   background: #ffffff;
-  padding: 25px 15px;
+  padding: 20px 10px;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: all var(--transition-speed) ease;
 }
 
 .about-stat:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
   box-shadow: 0 12px 25px rgba(220, 53, 69, 0.18);
   border-bottom: 4px solid var(--primary-color);
 }
@@ -206,14 +221,11 @@ body {
 }
 
 .gallery-img:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
   filter: brightness(95%);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
 }
 
-/* ==========================================
-   WARNA LATAR PER SECTION (biar tidak putih/abu polos)
-========================================== */
 .section-about {
   background: linear-gradient(160deg, #fff3e0 0%, #ffe0b2 55%, #ffd9a8 100%);
   position: relative;
@@ -260,25 +272,19 @@ body {
   z-index: 1;
 }
 
-/* Hover pada kartu komentar/testimoni di section Tentang */
 .testimoni-card {
   transition: all var(--transition-speed) ease;
   border-left: 4px solid transparent;
 }
 
 .testimoni-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 35px rgba(220, 53, 69, 0.2) !important;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(220, 53, 69, 0.18) !important;
   border-left: 4px solid var(--primary-color);
 }
 
-.testimoni-card:hover .fa-quote-left {
-  transform: scale(1.15);
-  transition: transform var(--transition-speed) ease;
-}
-
 /* ==========================================
-   PRODUK (MENU CARDS)
+   PRODUK (MENU CARDS & TAB FIX)
 ========================================== */
 .card-product {
   border: none;
@@ -289,57 +295,47 @@ body {
 }
 
 .card-product:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12) !important;
 }
 
 .card-product .card-img-top {
-  height: 220px;
+  height: 200px;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
 
 .card-product:hover .card-img-top {
-  transform: scale(1.08);
+  transform: scale(1.05);
 }
 
 .card-product .card-body {
-  padding: 1.5rem;
+  padding: 1.25rem;
 }
 
-/* Kotak ikon pengganti foto menu */
-.menu-icon-box {
-  height: 160px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3.2rem;
-  color: #fff;
-  transition: transform 0.5s ease;
+.menu-tab {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 10px;
+  padding: 0;
+  width: 100%;
 }
 
-.card-product:hover .menu-icon-box {
-  transform: scale(1.08);
+.menu-tab .nav-item {
+  margin: 0 !important;
 }
 
-.menu-icon-food {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-}
-
-.menu-icon-drink {
-  background: linear-gradient(135deg, #20a4a1 0%, #147d7a 100%);
-}
-
-/* Tab kategori menu (Makanan / Minuman) */
 .menu-tab .nav-link {
   color: var(--primary-color);
   font-weight: 600;
   border-radius: 30px;
-  padding: 10px 28px;
-  margin: 0 6px;
+  padding: 10px 22px;
   background: #ffffff;
   border: 2px solid var(--primary-color);
   transition: all var(--transition-speed) ease;
+  font-size: 15px;
+  display: inline-block;
 }
 
 .menu-tab .nav-link:hover {
@@ -349,17 +345,7 @@ body {
 .menu-tab .nav-link.active {
   background: var(--primary-color);
   color: #fff;
-  box-shadow: 0 8px 20px rgba(220, 53, 69, 0.35);
-}
-
-@media (max-width: 576px) {
-  .menu-tab {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-  }
-  .menu-tab .nav-link {
-    white-space: nowrap;
-  }
+  box-shadow: 0 6px 15px rgba(220, 53, 69, 0.3);
 }
 
 /* ==========================================
@@ -370,13 +356,13 @@ body {
 }
 
 #kontak .info-box p {
-  font-size: 16px;
+  font-size: 15px;
   transition: transform var(--transition-speed), color var(--transition-speed);
 }
 
 #kontak .info-box p:hover {
   color: var(--primary-color);
-  transform: translateX(8px);
+  transform: translateX(5px);
 }
 
 #kontak .card-form {
@@ -390,7 +376,7 @@ body {
   border: 1px solid #3d3d3d;
   color: #fff;
   border-radius: 10px;
-  padding: 12px 15px;
+  padding: 10px 14px;
   transition: border-color var(--transition-speed);
 }
 
@@ -401,15 +387,6 @@ body {
   color: #fff;
 }
 
-#kontak select.form-control option {
-  background: #181818;
-  color: #fff;
-}
-
-/* Perbaikan: select punya height bawaan Bootstrap yang lebih pendek dari
-   padding kustom di atas, sehingga teks di dalamnya terpotong di bagian atas.
-   Di sini height dibuat menyesuaikan konten + panah kustom menggantikan
-   panah asli browser yang bentrok dengan tampilan gelap. */
 #kontak select.form-control {
   height: auto;
   -webkit-appearance: none;
@@ -422,10 +399,15 @@ body {
   padding-right: 40px;
 }
 
+#kontak select.form-control option {
+  background: #181818;
+  color: #fff;
+}
+
 #kontak .info-box {
   background: #1b1b1b;
   border-radius: 18px;
-  padding: 30px;
+  padding: 24px;
   border: 1px solid #2b2b2b;
 }
 
@@ -458,87 +440,62 @@ body {
 }
 
 /* ==========================================
-   RESPONSIVE DESIGN
+   RESPONSIVE DESIGN KHUSUS HP (MOBILE FIXES)
 ========================================== */
 @media (max-width: 768px) {
-  #slider .carousel-item {
-    height: 380px;
-  }
-
-  #slider .carousel-caption h1 {
-    font-size: 2rem;
-  }
-
-  #slider .carousel-caption p {
-    font-size: 1rem;
+  .navbar-brand {
+    font-size: 20px;
   }
 
   .navbar-nav .nav-link {
     margin-left: 0;
-    padding: 8px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
-}
 
-/* ==========================================
-   PERBAIKAN TAMPILAN HP (RESPONSIVE FIX)
-========================================== */
-
-/* 1. Tab Menu Supaya Tidak Terpotong di HP */
-.menu-tab {
-  display: flex;
-  flex-wrap: wrap; /* Izinkan wrap agar tidak meluap keluar layar */
-  justify-content: center;
-  gap: 10px; /* Jarak antar tombol rapi */
-  padding: 0 10px;
-}
-
-.menu-tab .nav-item {
-  margin: 0;
-}
-
-.menu-tab .nav-link {
-  font-size: 14px;
-  padding: 8px 16px;
-  margin: 0;
-  white-space: nowrap;
-}
-
-/* 2. Responsif Carousel / Slider di HP */
-@media (max-width: 576px) {
   #slider .carousel-item {
-    height: 280px; /* Disesuaikan agar slider tidak terlalu tinggi di HP */
-  }
-
-  #slider .carousel-caption {
-    padding-bottom: 5px;
+    height: 320px;
   }
 
   #slider .carousel-caption h1 {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
   }
 
   #slider .carousel-caption p {
-    font-size: 0.85rem;
-    margin-bottom: 12px;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
   }
 
   #slider .carousel-caption .btn {
-    padding: 6px 16px;
-    font-size: 12px;
+    padding: 8px 20px;
+    font-size: 14px;
   }
 
-  /* Padding Section agar hemat ruang di layar HP */
-  .page-section {
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
+  .menu-tab .nav-link {
+    font-size: 13.5px;
+    padding: 8px 16px;
   }
 
-  /* Memperbaiki jarak Card Statistik pada Section About */
   .about-stat {
-    padding: 15px 10px;
+    padding: 15px 8px;
   }
-  
+
   .about-stat h4 {
     font-size: 1.1rem;
+  }
+
+  .about-stat p {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .menu-tab .nav-link {
+    font-size: 12px;
+    padding: 7px 12px;
+  }
+  
+  .navbar-brand {
+    font-size: 18px;
   }
 }
